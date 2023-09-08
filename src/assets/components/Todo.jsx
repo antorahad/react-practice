@@ -12,4 +12,10 @@ export default function Todo({task, complete}){
                 <p>Task pending: {task}</p>
             </>
         )    
+
+    // return(
+    //     <>
+    //         <p>{complete ? 'Done' : 'Pending'}  {task}</p>
+    //     </>
+    // )
 }

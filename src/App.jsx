@@ -9,10 +9,12 @@ import Student from './assets/components/Student'
 import Employee from './assets/components/Employee'
 import Faculty from './assets/components/Faculty'
 import Todo from './assets/components/Todo'
+import Abouttoday from './assets/components/Abouttoday'
+import Dynamic from './assets/components/Dynamic'
 
 
 function App() {
-
+      const dayName = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   return (
     <>
       <div>
@@ -80,6 +82,28 @@ function App() {
           <Todo task={'Learing JavaScript'} complete={true}></Todo>
           <Todo task={'Learing React'} complete={false}></Todo>
         </div>
+      </section>
+
+      {/* about today */}
+      <section>
+          <h1>About Today</h1>
+          <div>
+              <Abouttoday que={'Today is friday?'}ans={true}></Abouttoday>
+              <Abouttoday que={'Are you sleeping?'}ans={false}></Abouttoday>
+              <Abouttoday que={'Is it 7 pm?'} ans={false}></Abouttoday>
+              <Abouttoday que={'Did you eat meat?'}ans={true}></Abouttoday>
+          </div>
+      </section>
+
+      {/* dynamic rendering */}
+      <section>
+          <h1>Dynamic Rendering</h1>
+          <div>
+            <h1>Day Name</h1>
+            {
+              dayName.map(day => <Dynamic day={day}></Dynamic>)
+            }              
+          </div>
       </section>
     </>
   )
